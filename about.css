@@ -1,0 +1,309 @@
+/* 🌊 Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #1d7cdb, #97c9fc);
+  color: white;
+  overflow-x: hidden;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  position: relative;
+}
+
+/* Floating bubbles overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: url('https://i.ibb.co/qW3w3pB/bubbles.png') repeat;
+  opacity: 0.2;
+  animation: bubbles 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes bubbles {
+  0% { background-position: 0 100%; }
+  100% { background-position: 0 0; }
+}
+
+/* ✅ Navbar (unchanged) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #00eaff, #205bfe);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-actions .btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0074cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.donate-top {
+  background-color: red;
+}
+
+/* ✅ About Us Hero Section */
+.about-hero {
+  position: relative;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro-section {
+  background: linear-gradient(145deg, #006994, #0099cc, #33ccff);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
+  animation: shimmer 8s infinite alternate;
+}
+
+.intro-section h1 {
+  font-size: 2.8rem;
+  color: #00eaff;
+  text-shadow: 0 0 15px rgba(0, 238, 255, 0.8);
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+/* Sparkly shimmer animation */
+@keyframes shimmer {
+  from { background-position: left top; }
+  to { background-position: right bottom; }
+}
+
+/* ✅ Mission & Vision */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem 0;
+  z-index: 1;
+}
+
+.about-hero img {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+.mission, .vision {
+  flex: 1 1 400px;
+  background: linear-gradient(160deg, #004466, #0077b6, #00aaff);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
+}
+
+.mission h2, .vision h2 {
+  color: #00eaff;
+  text-shadow: 0 0 12px rgba(0, 238, 255, 0.7);
+}
+
+.mission img, .vision img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+}
+
+/* ✅ Story, Impact, Growth Sections */
+.origin-story, .impact-section, .growth-section {
+  margin: 3rem 0;
+  background: linear-gradient(145deg, #003355, #005f73, #0096c7);
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.origin-story h2,
+.impact-section h2,
+.growth-section h2 {
+  color: #00eaff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.origin-story img,
+.impact-section img,
+.growth-section img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 18px rgba(0, 238, 255, 0.3);
+}
+
+.origin-story p,
+.growth-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.impact-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.impact-section li {
+  margin: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.impact-section li::before {
+  content: "🐚";
+  position: absolute;
+  left: 0;
+}
+
+/* ✅ Floating sparkles */
+.origin-story::after, .impact-section::after, .growth-section::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255,255,255,0.5) 2px, transparent 2px);
+  background-size: 50px 50px;
+  animation: sparkle 6s linear infinite;
+  top: 0; left: 0;
+  pointer-events: none;
+  opacity: 0.15;
+}
+
+@keyframes sparkle {
+  from { background-position: 0 0; }
+  to { background-position: 100px 100px; }
+}
+
+/* ✅ Responsive Tweaks */
+
+/* 📱 Phones (up to 600px) */
+@media (max-width: 600px) {
+  body {
+    background-color: #ffffff;
+    color: #001f3f;
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .nav-actions {
+    margin-top: 1rem;
+  }
+
+  .nav-actions .btn {
+    margin: 0.5rem;
+  }
+
+  .intro-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .intro-section p {
+    font-size: 0.95rem;
+  }
+
+  .mission, .vision {
+    padding: 1rem;
+  }
+
+  .origin-story, .impact-section, .growth-section {
+    padding: 1rem;
+  }
+
+  .impact-section li {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Tablets & iPads (up to 1024px) */
+@media (max-width: 1024px) {
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .origin-story, .impact-section, .growth-section {
+    padding: 1.5rem;
+  }
+
+  .origin-story h2,
+  .impact-section h2,
+  .growth-section h2 {
+    font-size: 1.5rem;
+  }
+
+}

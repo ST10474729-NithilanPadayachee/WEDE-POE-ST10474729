@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects - Saving the Sea</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hermit Heroes</div>
+      <ul class="nav-links">
+       <li><a href="welcomepage.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="projects.html">OUR PROJECTS</a></li>
+      <li><a href="seanews.html">SEA NEWS</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+      <div class="nav-actions">
+       
+        <a href="#" class="btn">JOIN</a>
+        <a href="#" class="btn">ACT NOW</a>
+        <a href="#" class="btn">SHOP</a>
+        <a href="#" class="btn donate-top">DONATE</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Lovely Ocean Projects</h1>
+    <p>We are committed to making waves of positive change, blending creativity, passion, and community to restore the beauty of our seas.</p>
+  </section>
+
+  <section class="projects">
+    <div class="project">
+      <img src="img1.jpg" alt="Coral Reef Restoration">
+      <div class="text">
+        <h2>Coral Reef Restoration</h2>
+        <p>Our coral reef restoration initiative is a long-term project where we collaborate with marine biologists, volunteers, and divers to replant and nurture coral fragments. These vibrant reefs are the nurseries of marine life, and by reviving them, we ensure a thriving underwater ecosystem filled with color, balance, and life.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="img2.jpg" alt="Plastic-Free Shores">
+      <div class="text">
+        <h2>Plastic-Free Shores</h2>
+        <p>This campaign focuses on organizing regular beach clean-ups with schools, local communities, and ocean enthusiasts. Beyond cleaning, we raise awareness about reducing single-use plastics, inspiring people to adopt sustainable alternatives that keep our shores glimmering with natural beauty instead of harmful waste.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="img3.jpg" alt="Marine Animal Rescue">
+      <div class="text">
+        <h2>Marine Animal Rescue</h2>
+        <p>From turtles tangled in fishing nets to dolphins caught in pollution, our rescue team responds with compassion and urgency. This project brings hope back into the eyes of injured creatures, and each successful release into the wild is a celebration of freedom, resilience, and love for our fellow beings.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="img4.jpg" alt="Youth Ocean Education">
+      <div class="text">
+        <h2>Youth Ocean Education</h2>
+        <p>We believe the future of our oceans lies in the hands of today’s children. Through creative workshops, underwater storytelling sessions, and ocean art projects, we connect young hearts with the sea. This project lights a spark of care and responsibility in future generations.</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="img5.jpg" alt="Underwater Garden Art">
+      <div class="text">
+        <h2>Underwater Garden Art</h2>
+        <p>A unique project where we combine environmental science and artistry. Sculptors and divers build eco-friendly underwater art installations that double as artificial reefs. They invite fish, promote coral growth, and turn the deep sea into a living gallery of wonder and beauty.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ideas">
+    <h2>Pitch Your Lovely Ideas</h2>
+    <form id="ideaForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="idea" placeholder="Share your ocean-saving idea..." required></textarea>
+      <button type="submit">Submit Idea</button>
+    </form>
+  </section>
+
+  <div class="popup" id="popup"></div>
+
+  <script>
+    const form = document.getElementById('ideaForm');
+    const popup = document.getElementById('popup');
+    let ideas = [];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const idea = document.getElementById('idea').value;
+      ideas.push(`${name} says: ${idea}`);
+      form.reset();
+      if (ideas.length === 1) showPopup();
+    });
+
+    function showPopup() {
+      let index = 0;
+      popup.style.display = 'block';
+      popup.innerText = ideas[index];
+      setInterval(() => {
+        if (ideas.length > 0) {
+          popup.innerText = ideas[index % ideas.length];
+          index++;
+        }
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

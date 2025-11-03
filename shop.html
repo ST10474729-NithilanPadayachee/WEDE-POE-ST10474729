@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Shop</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+    <nav class="navbar">
+      <div class="logo">HERMIT HEROES</div>
+      <ul class="nav-links">
+        <li><a href="welcomepage.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="projects.html">OUR PROJECTS</a></li>
+        <li><a href="seanews.html">SEA NEWS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="join.html" class="btn">JOIN</a>
+        <a href="actnow.html" class="btn">ACT NOW</a>
+        <a href="shop.html" class="btn">SHOP</a>
+        <a href="donate.html" class="donate">DONATE</a>
+      
+      </div>
+    </nav>
+  <div class="shop-container">
+  <!-- Product 1 -->
+  <div class="product-card" data-name="Ocean Wave Shirt" data-price="50">
+    <img src="https://i.pinimg.com/1200x/6c/86/a2/6c86a204ea6f59ab6b9d411522cc2083.jpg "alt="Ocean Wave Shirt">
+    <h3>Ocean Wave Shirt</h3>
+    <p>$50</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card" data-name="Coral Reef Shirt" data-price="50">
+    <img src="https://i.pinimg.com/1200x/93/57/d9/9357d90471cae67ee6eaba58e9f24eab.jpg" alt="Coral Reef Shirt">
+    <h3>Coral Reef Shirt</h3>
+    <p>$50</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card" data-name="Sea Breeze Shirt" data-price="50">
+    <img src="https://i.pinimg.com/1200x/2c/5b/5d/2c5b5ded6f69b706f1c828762d0d4a83.jpg" alt="Sea Breeze Shirt">
+    <h3>Sea Breeze Shirt</h3>
+    <p>$50</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card" data-name="Beach Sand Sneakers" data-price="150">
+    <img src="https://i.pinimg.com/1200x/45/58/6a/45586ae7cdba09cac0013480209be700.jpg" alt="Beach Sand Sneakers">
+    <h3>Beach Sand Sneakers</h3>
+    <p>$150</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product-card" data-name="Tropical Tide Sneakers" data-price="150">
+    <img src="https://i.pinimg.com/736x/76/e4/7e/76e47ec26fafd125efd4c0e9eb6a6c7f.jpg" alt="Tropical Tide Sneakers">
+    <h3>Tropical Tide Sneakers</h3>
+    <p>$150</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card" data-name="Sunset Glow Sneakers" data-price="150">
+    <img src="https://i.pinimg.com/1200x/46/9b/6c/469b6cb4d4ef9f560a451aa4003d25cd.jpg" alt="Sunset Glow Sneakers">
+    <h3>Sunset Glow Sneakers</h3>
+    <p>$150</p>
+    <button class="add-cart">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Cart Section -->
+<div class="cart-section">
+  <h2>Your Cart</h2>
+  <ul class="cart-list"></ul>
+  <p class="cart-total">Total: $0</p>
+</div>
+
+
+  <section class="cart-section">
+    <h2>🛒 Your Cart</h2>
+    <ul class="cart-list"></ul>
+    <p class="cart-total">Total: $0</p>
+  </section>
+
+
+      <div class="cart">
+  <h2>Your Cart</h2>
+  <button id="clear-cart">🗑️ Clear Cart</button>
+</div>
+<div class="gallery">
+  <img src="images/image1.jpg" alt="https://i.pinimg.com/1200x/6c/86/a2/6c86a204ea6f59ab6b9d411522cc2083.jpg" class="gallery-item">
+  <img src="images/image2.jpg" alt="Image 2" class="gallery-item">
+  <img src="images/image3.jpg" alt="Image 3" class="gallery-item">
+  <img src="images/image4.jpg" alt="Image 4" class="gallery-item">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+<script src="shop.js"></script>
+
+
+  
+
+  
+</body>
+</html>
